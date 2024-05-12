@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.30c324b8.css",
-    "main.js": "/static/js/main.f147c24e.js",
+    "main.js": "/static/js/main.231eff81.js",
     "static/media/vecteezy_3d-speech-bubbles-icon-or-chat-message-notification-icon-or_15078719_328.png": "/static/media/vecteezy_3d-speech-bubbles-icon-or-chat-message-notification-icon-or_15078719_328.7909e985918fe748e5ed.png",
     "static/media/C__2_-removebg-preview.png": "/static/media/C__2_-removebg-preview.bf99246f0f21e2979c4c.png",
     "index.html": "/index.html",
     "main.30c324b8.css.map": "/static/css/main.30c324b8.css.map",
-    "main.f147c24e.js.map": "/static/js/main.f147c24e.js.map"
+    "main.231eff81.js.map": "/static/js/main.231eff81.js.map"
   },
   "entrypoints": [
     "static/css/main.30c324b8.css",
-    "static/js/main.f147c24e.js"
+    "static/js/main.231eff81.js"
   ]
 }

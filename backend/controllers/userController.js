@@ -31,7 +31,6 @@ const registerUser=expressAsyncHandler(
             res.status(400);
             throw new Error("Failed to create user try again...")
         }
-        // console.log(req.body)
     }
 )
 

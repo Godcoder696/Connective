@@ -63,7 +63,7 @@ export default function SignUp(params) {
         } catch (error) {
             toast({
                 title:"An Error Occurred!",
-                description: error.response.data.message,
+                // description: error.response.data.message,
                 status:"warning",
                 duration:1500,
                 isClosable:true,

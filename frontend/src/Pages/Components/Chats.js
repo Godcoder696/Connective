@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import {HStack,Image,Text} from '@chakra-ui/react'
 import axios from 'axios';
-import Loading from '../miscellaneous/Loading';
+import React, { useEffect, useState } from 'react';
 import { ChatState } from '../../Context/ChatProvider';
+import Loading from '../miscellaneous/Loading';
+import { HStack, Image, Text } from '@chakra-ui/react';
 
 const Chats = (params) => {
   const {selectedChat,setSelectedChat}= ChatState()
@@ -12,13 +12,14 @@ const Chats = (params) => {
   const userInfo= JSON.parse(localStorage.getItem("userInfo"));
   const fetchChats=async ()=>{
     setLoading(true)
+    // console.log(userInfo.token);
     try {
       const config={
         headers:{
           Authorization:`Bearer ${userInfo.token}`
         }
       }
-      const {data}= await axios.get(`http://localhost:5000/api/chat/`,config)
+      const {data}= await axios.get(`/api/chat/`,config)
       console.log(config)
       setChats(data)
       console.log(data);
