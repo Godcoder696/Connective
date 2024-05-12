@@ -6,6 +6,7 @@ const userRoutes= require("./routes/userRoutes")
 const chatRoutes= require("./routes/chatRoutes")
 const messageRoutes= require("./routes/messageRoutes")
 const { errorhandler, notFound } = require("./middlewares/errorMiddleware")
+const path= require("path")
 
 dotenv.config()
 
@@ -16,6 +17,28 @@ app.use(cors())
 connectDB()
 
 app.use(express.json())
+
+// ---------------------------- DEPLOYMENT -------------------------------
+
+
+const _dirName= path.resolve()
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static(path.join(_dirName,"/frontend/build")))
+
+    app.get('*',(req,res)=>{
+        res.sendFile(path.resolve(_dirName,"frontend","build","index.html"))
+    })
+}
+else{
+    app.get("/",(req,res)=>{
+        res.send("API running successfully!");
+    })
+}
+
+
+// ---------------------------- DEPLOYMENT -------------------------------
+
+
 
 app.get("/",(req,res)=>{
     // console.log("API is running!");
