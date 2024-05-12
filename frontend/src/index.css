@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Sometype+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    color: white;
+    font-family: "Sometype Mono";
+}
+
+.chatBox-scrollBar::-webkit-scrollbar{
+    display: block;
+}
